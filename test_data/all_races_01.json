@@ -1,0 +1,120 @@
+{
+  "races": [
+    {
+      "name": "ff7/gnarly-waluigi-2626",
+      "status": {
+        "value": "in_progress",
+        "verbose_value": "In progress",
+        "help_text": "Race is in progress"
+      },
+      "url": "/ff7/gnarly-waluigi-2626",
+      "data_url": "/ff7/gnarly-waluigi-2626/data",
+      "goal": {
+        "name": "No Major Glitches",
+        "custom": false
+      },
+      "info": "The NMS Showdown!!!",
+      "entrants_count": 9,
+      "entrants_count_finished": 5,
+      "entrants_count_inactive": 3,
+      "opened_at": "2022-10-22T13:40:37.747Z",
+      "started_at": "2022-10-22T14:45:42.204Z",
+      "time_limit": "P1DT00H00M00S",
+      "category": {
+        "name": "Final Fantasy VII",
+        "short_name": "FF7",
+        "slug": "ff7",
+        "url": "/ff7",
+        "data_url": "/ff7/data",
+        "image": "https://racetime.gg/media/cover-2561.png"
+      }
+    },
+    {
+      "name": "alttpr/puzzled-paradox-4828",
+      "status": {
+        "value": "in_progress",
+        "verbose_value": "In progress",
+        "help_text": "Race is in progress"
+      },
+      "url": "/alttpr/puzzled-paradox-4828",
+      "data_url": "/alttpr/puzzled-paradox-4828/data",
+      "goal": {
+        "name": "Do your best and have fun!",
+        "custom": true
+      },
+      "info": "beginner - https://alttpr.com/h/rzGORK2Oyj - (Boots/Ether/Shovel/Bugnet/Mushroom)\nCoy Pond Weekly",
+      "entrants_count": 13,
+      "entrants_count_finished": 12,
+      "entrants_count_inactive": 0,
+      "opened_at": "2022-10-23T00:21:54.082Z",
+      "started_at": "2022-10-23T01:00:51.610Z",
+      "time_limit": "P1DT00H00M00S",
+      "category": {
+        "name": "A Link to the Past Randomizer",
+        "short_name": "ALttPR",
+        "slug": "alttpr",
+        "url": "/alttpr",
+        "data_url": "/alttpr/data",
+        "image": "https://racetime.gg/media/alttpr.png"
+      }
+    },
+    {
+      "name": "khfmr/witty-shiva-5212",
+      "status": {
+        "value": "in_progress",
+        "verbose_value": "In progress",
+        "help_text": "Race is in progress"
+      },
+      "url": "/khfmr/witty-shiva-5212",
+      "data_url": "/khfmr/witty-shiva-5212/data",
+      "goal": {
+        "name": "Any% (Proud Mode)",
+        "custom": false
+      },
+      "info": "Casual Late Night Race w/Discord Community",
+      "entrants_count": 3,
+      "entrants_count_finished": 1,
+      "entrants_count_inactive": 1,
+      "opened_at": "2022-10-23T06:16:43.557Z",
+      "started_at": "2022-10-23T06:49:56.064Z",
+      "time_limit": "P1DT00H00M00S",
+      "category": {
+        "name": "Kingdom Hearts FM Randomizer",
+        "short_name": "KHFM Rando",
+        "slug": "khfmr",
+        "url": "/khfmr",
+        "data_url": "/khfmr/data",
+        "image": "https://racetime.gg/media/KHFMR_NeeDmCd.jpg"
+      }
+    },
+    {
+      "name": "exoracer/dynamic-celeste-1833",
+      "status": {
+        "value": "open",
+        "verbose_value": "Open",
+        "help_text": "Anyone may join this race"
+      },
+      "url": "/exoracer/dynamic-celeste-1833",
+      "data_url": "/exoracer/dynamic-celeste-1833/data",
+      "goal": {
+        "name": "All Hard\r",
+        "custom": false
+      },
+      "info": "",
+      "entrants_count": 1,
+      "entrants_count_finished": 0,
+      "entrants_count_inactive": 0,
+      "opened_at": "2022-10-23T09:19:16.900Z",
+      "started_at": null,
+      "time_limit": "P1DT00H00M00S",
+      "category": {
+        "name": "Exoracer",
+        "short_name": "Exoracer",
+        "slug": "exoracer",
+        "url": "/exoracer",
+        "data_url": "/exoracer/data",
+        "image": "https://racetime.gg/media/Screenshot_20220805-121540_Google_Play_Store.jpg"
+      }
+    }
+  ]
+}
