@@ -23,5 +23,5 @@ extern crate derive_builder;
 pub mod client;
 pub mod endpoint;
 pub mod endpoints;
-mod err;
+pub mod err;
 pub mod types;

@@ -50,58 +50,39 @@ pub struct Goal {
 
 #[derive(Deserialize, Debug)]
 pub struct User {
-    id: String,
-    full_name: String,
-    name: String,
-    discriminator: String,
-    url: String,
-    avatar: Option<String>,
-    pronouns: Option<String>,
+    pub id: String,
+    /// name with scrim (e.g. FoxLisk#8582)
+    pub full_name: String,
+    /// name without scrim (e.g. FoxLisk)
+    pub name: String,
+    /// scrim without name (e.g. 8582)
+    pub discriminator: String,
+    pub url: String,
+    pub avatar: Option<String>,
+    pub pronouns: Option<String>,
     /// note this is actually a space-separated list
-    flair: String,
-    twitch_name: Option<String>,
-    twitch_channel: Option<String>,
-    can_moderate: bool,
+    pub flair: String,
+    pub twitch_name: Option<String>,
+    pub twitch_channel: Option<String>,
+    pub can_moderate: bool,
 }
 
-/*
-{
-      "team": null,
-      "status": {
-        "value": "done",
-        "verbose_value": "Finished",
-        "help_text": "Finished the race."
-      },
-      "finish_time": "P0DT01H29M21.729469S",
-      "finished_at": "2022-10-23T04:03:17.923Z",
-      "place": 1,
-      "place_ordinal": "1st",
-      "score": 1586,
-      "score_change": null,
-      "comment": null,
-      "has_comment": false,
-      "stream_live": true,
-      "stream_override": false,
-      "actions": [
-        "add_comment"
-      ]
-    },
- */
 #[derive(Deserialize, Debug)]
 /// note: i'm omitting Team in part because it's not documented and I don't have one handy
 pub struct PastRaceEntrant {
-    status: Status,
-    finish_time: Option<String>,
-    finished_at: Option<String>,
-    place: Option<u32>,
-    place_ordinal: Option<String>,
+    pub status: Status,
+    pub finish_time: Option<String>,
+    pub finished_at: Option<String>,
+    pub place: Option<u32>,
+    pub place_ordinal: Option<String>,
     /// score when the user _entered_ the race
-    score: Option<u32>,
+    pub score: Option<u32>,
     /// null until recorded
-    score_change: Option<i32>,
-    comment: Option<String>,
-    has_comment: bool,
-    stream_override: bool,
+    pub score_change: Option<i32>,
+    pub comment: Option<String>,
+    pub has_comment: bool,
+    pub stream_override: bool,
+    pub user: User,
 }
 
 #[derive(Deserialize, Debug)]

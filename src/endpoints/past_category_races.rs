@@ -4,7 +4,7 @@ use crate::err::RacetimeError;
 use serde::Serialize;
 use std::borrow::Cow;
 
-#[derive(serde::Serialize, Builder)]
+#[derive(Serialize, Builder)]
 pub struct PastCategoryRaces {
     #[builder(setter(into))]
     category: String,
