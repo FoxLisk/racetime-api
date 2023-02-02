@@ -56,7 +56,8 @@ pub struct User {
     /// name without scrim (e.g. FoxLisk)
     pub name: String,
     /// scrim without name (e.g. 8582)
-    pub discriminator: String,
+    /// This can be None for, idk, staff or something?
+    pub discriminator: Option<String>,
     pub url: String,
     pub avatar: Option<String>,
     pub pronouns: Option<String>,
@@ -140,9 +141,14 @@ pub struct RaceWithEntrants {
     pub entrants: Vec<PastRaceEntrant>,
 }
 
+#[derive(serde::Deserialize, Debug)]
+pub struct UserSearchResult {
+    pub results: Vec<User>
+}
+
 #[cfg(test)]
 mod tests {
-    use crate::types::{Race, RaceWithEntrants, RaceWithPartialCategory, Races, RacesPaginated};
+    use crate::types::{Race, RaceWithEntrants, RaceWithPartialCategory, Races, RacesPaginated, UserSearchResult};
     use std::fs::read_to_string;
 
     #[test]
@@ -173,5 +179,27 @@ mod tests {
 
         let races: Result<RacesPaginated<RaceWithEntrants>, _> = serde_json::from_str(&json_blob);
         assert!(races.is_ok(), "{:?}", races);
+    }
+
+    #[test]
+    fn test_deserialize_races_with_past_entrants_2() {
+        let json_blob = read_to_string("test_data/races_with_past_entrants_2.json").unwrap();
+        let parsed_blob: serde_json::Value = serde_json::from_str(&json_blob).unwrap();
+        let races = parsed_blob.get("races").unwrap();
+        for race in races.as_array().unwrap() {
+            let re_unparsed = serde_json::to_string(race).unwrap();
+            let rwe: Result<RaceWithEntrants, _> = serde_json::from_str(&re_unparsed);
+            assert!(rwe.is_ok(), "{}", re_unparsed);
+        }
+
+        let races: Result<RacesPaginated<RaceWithEntrants>, _> = serde_json::from_str(&json_blob);
+        assert!(races.is_ok(), "{:?}", races);
+    }
+
+    #[test]
+    fn test_deserialize_user_search() {
+        let json_blob = read_to_string("test_data/user_search_f.json").unwrap();
+        let users: Result<UserSearchResult, _> = serde_json::from_str(&json_blob);
+        assert!(users.is_ok());
     }
 }
