@@ -146,6 +146,28 @@ pub struct UserSearchResult {
     pub results: Vec<User>
 }
 
+#[derive(serde::Deserialize, Debug)]
+pub struct Ranking {
+    pub user: User,
+    pub place: u32,
+    pub place_ordinal: String,
+    pub score: u32,
+    pub best_time: String,
+    pub times_raced: u32,
+}
+
+#[derive(serde::Deserialize, Debug)]
+pub struct Leaderboard {
+    pub goal: String,
+    pub num_ranked: u32,
+    pub rankings: Vec<Ranking>
+}
+
+#[derive(serde::Deserialize, Debug)]
+pub struct LeaderboardsResult {
+    pub leaderboards: Vec<Leaderboard>
+}
+
 #[cfg(test)]
 mod tests {
     use crate::types::{Race, RaceWithEntrants, RaceWithPartialCategory, Races, RacesPaginated, UserSearchResult};
@@ -163,7 +185,7 @@ mod tests {
         let json_blob = read_to_string("test_data/all_races_01.json").unwrap();
         let races: Result<Races<RaceWithPartialCategory>, _> = serde_json::from_str(&json_blob);
         assert!(races.is_ok());
-        let r = races.unwrap();
+        races.unwrap();
     }
 
     #[test]

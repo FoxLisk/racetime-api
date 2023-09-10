@@ -1,7 +1,7 @@
 use racetime_api::client::RacetimeClient;
 use racetime_api::endpoint::Query;
 use racetime_api::endpoints::{PastCategoryRaces, PastCategoryRacesBuilder};
-use racetime_api::types::{PastRaceEntrant, Race, RaceWithEntrants, RacesPaginated};
+use racetime_api::types::{Race, RaceWithEntrants, RacesPaginated};
 
 #[tokio::main]
 async fn main() {

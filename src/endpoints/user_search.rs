@@ -1,6 +1,5 @@
 use crate::endpoint::Endpoint;
 use crate::err::RacetimeError;
-use serde::Serialize;
 use std::borrow::Cow;
 use std::fmt::Display;
 

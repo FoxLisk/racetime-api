@@ -31,8 +31,12 @@ pub enum ApiError {
 
 impl RacetimeClient {
     pub fn new() -> Result<Self, ClientError> {
+        Self::new_with_url(BASE_URL)
+    }
+
+    pub fn new_with_url(endpoint: &str) -> Result<Self, ClientError> {
         let client = ClientBuilder::new().build()?;
-        let endpoint = Url::parse(BASE_URL)?;
+        let endpoint = Url::parse(endpoint)?;
         Ok(Self { client, endpoint })
     }
 
